@@ -1,0 +1,126 @@
+.q1image {
+  width: 450px;
+  height: 20%;
+}
+
+.mainQz {
+  background-color: #e5e3e4;
+  width: 93%;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+}
+
+.div2ndQz {
+  padding: 2%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.question1 {
+  font-weight: normal;
+  font-size: 19;
+}
+.question2 {
+  font-weight: normal;
+  font-size: 19;
+}
+.question3 {
+  font-weight: normal;
+  font-size: 19;
+}
+.question4 {
+  font-weight: normal;
+  font-size: 19;
+}
+.question5 {
+  font-weight: normal;
+  font-size: 19;
+}
+.question6 {
+  font-weight: normal;
+  font-size: 19;
+}
+.question7 {
+  font-weight: normal;
+  font-size: 19;
+}
+.BillionaireQz {
+  color: #4d4d4d;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+}
+
+.questionQz {
+  color: #4d4d4d;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+.Q1 {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.Q2 {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.Q3 {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.Q4 {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.Q5 {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.Q6 {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.Q7 {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.q1image {
+  margin: 2%;
+}
+
+.answer1 {
+  color: "black";
+  cursor: default;
+  display: block;
+  line-height: 40px;
+}
+
+
+.resultbut {
+  width: 130px;
+  height: 5vh;
+  outline: none;
+  background-color: #3c8ac9;
+  border: none;
+  margin-top: 1%;
+  color: white;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 664px) {
+  .q1image {
+    width: 100%;
+  }
+  .mainQz {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}

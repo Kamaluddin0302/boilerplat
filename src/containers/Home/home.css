@@ -1,0 +1,120 @@
+.main {
+  background-color: #e5e3e4;
+  width: 93%;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+
+  height: 99.7vh;
+}
+
+.div2nd {
+  padding: 2%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.Billionaire {
+  color: #4d4d4d;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+}
+
+.question {
+  color: #4d4d4d;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+.description {
+  color: #6e6e6e;
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1;
+  display: block;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.name {
+  color: #4d4d4d;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+
+.nameInput {
+  width: 90%;
+  margin-top: 2%;
+  padding: 4px;
+  font-size: 13px;
+}
+.lastnameInput {
+  width: 90%;
+  margin-top: 2%;
+  padding: 4px;
+  font-size: 13px;
+}
+
+.email {
+  color: #4d4d4d;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  padding-top: 1.5%;
+}
+.emailInput {
+  width: 95%;
+  padding: 4px;
+  font-size: 13px;
+  /* border: gray; */
+}
+
+.start {
+  width: 110px;
+  height: 6vh;
+  outline: none;
+  background-color: #3c8ac9;
+  border: none;
+  margin-top: 1%;
+  color: white;
+}
+
+.image {
+  width: 450px;
+  height: 38vh;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: normal;
+  font-size: 13px;
+}
+/* media Query */
+
+@media only screen and (max-width: 1255px) {
+  .main {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+
+@media only screen and (max-width: 694px) {
+  .image {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .emailInput {
+    width: 90%;
+  }
+}

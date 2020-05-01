@@ -1,77 +1,108 @@
 import React from "react";
-import banner from "./../../images/ecommerce-banner.png";
-import CarouselPage from "./../../component/slider/slider";
-import OutlinedChips from "./../../component/Chips/Chips";
+import "./home.css";
 import Grid from "@material-ui/core/Grid";
-import MediaCard from "./../../component/card/card";
-import Appbar from "./../../component/navbar/navbar";
-import {Firebase} from './../../config/firrebase/firebase';
-import FooterPage from './../../component/Footer/footer'
 class Home extends React.Component {
   constructor() {
     super();
-    this.state = {
-      showArray: [],
-      productCard : []
-    };
-    this.shoppage = this.shoppage.bind(this)
+    this.state = {};
   }
-  componentDidMount(){
-    let {showArray} = this.state
-    let getproduct = localStorage.getItem('Allpeoduct')
-    if(getproduct){
-      getproduct= JSON.parse(getproduct);
+
+  onHandelchange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+  start = () => {
+    if (!this.state.fristName) {
       this.setState({
-        productCard : getproduct
-      })
+        nameerrormessage: "Please enter Frist and last Name",
+        emailerrormessage: "",
+      });
+    } else if (!this.state.email) {
+      this.setState({
+        emailerrormessage: "Please enter your email-Id",
+        nameerrormessage: "",
+      });
+    } else {
+      this.props.history.push("quiz");
     }
-    console.log("firebas")
-      Firebase.firestore().collection('product').get().then(querySnapshot=> {
-        console.log(querySnapshot)
-              querySnapshot.forEach(doc=>{
-              let FirebaseData = doc.data()
-              showArray.push(FirebaseData) 
-              console.log(showArray)
-              this.setState({
-                showArray
-              })
-              
-      })
-    })
-  }
-  shoppage(e){
-  console.log(this.props)
-this.props.history.push( "/shop",{name :e.target.innerHTML})
- }
-
+  };
   render() {
- console.log(this.state, "home")
+    console.log(this.state, "home");
     return (
-      <div className="App">
-        {console.log(this.props)}
-        <Appbar getproduct = {this.state.productCard} />
-        <CarouselPage />
-        <br />
-        <Grid container justify="center">
-          <Grid item xs={12} sm={10} md={10} lg={8}>
-            <img src={banner} alt="baner" width="100%" />
+      <div className="main">
+        <div className="div2nd">
+          <Grid item xs={12}>
+            <span className="Billionaire">
+              What Type of Billionaire are You?
+            </span>
+            <span className="question"> 7 Questions</span>
           </Grid>
-        </Grid>
-        <OutlinedChips name = "Shirt" shoppage = {this.shoppage}/>
-        <OutlinedChips name = "Watch" shoppage = {this.shoppage}/>
-        <OutlinedChips name = "Laptop" shoppage = {this.shoppage}/>
-        <OutlinedChips name = "Shose" shoppage = {this.shoppage}/>
+          <Grid item lg={12} sm={8} xs={8}>
+            <img
+              src="https://media.proprofs.com/images/QM/user_images/2704351/1587411535.png"
+              className="image"
+            />
+          </Grid>
+          <Grid lg={10} sm={12} xs={12}>
+            <span className="description">
+              What billionaire are you most similar to? How would you spend your
+              fortune? Go ahead take this quiz and find out!
+            </span>
+          </Grid>
+          <form>
+            <div>
+              <span className="errorMessage">
+                {this.state.nameerrormessage}
+              </span>
+              <label className="name">Name</label>
+              <Grid container direction="row" lg={4}>
+                <Grid lg={6} sm={4} xs={8}>
+                  <input
+                    type="text"
+                    placeholder="Frist Name"
+                    name="fristName"
+                    className="nameInput"
+                    onChange={(e) => this.onHandelchange(e)}
+                  />
+                </Grid>
+                <Grid lg={6} sm={4} xs={8}>
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    name="lastName"
+                    className="lastnameInput"
+                    onChange={(e) => this.onHandelchange(e)}
+                  />
+                </Grid>
+              </Grid>
+            </div>
+            <div>
+              <span className="errorMessage">
+                {this.state.emailerrormessage}
+              </span>
 
+              <label className="email">Email</label>
 
-        <Grid container justify="center">
-          {this.state.showArray.map((v, i) => (
-            <Grid key={i} item xs={12} sm={6} md={4} lg={3}>
-              {console.log(v)}
-              <MediaCard image={v.image} name= {v.name} price = {v.price} detail = {v.discription} quantity = {v.quantity}/>
-            </Grid>
-          ))}
-        </Grid>
-        <FooterPage/>
+              <Grid lg={4} sm={8} xs={8}>
+                <input
+                  type="email"
+                  placeholder="someone@example.com"
+                  className="emailInput"
+                  name="email"
+                  onChange={(e) => this.onHandelchange(e)}
+                />
+              </Grid>
+              <br />
+              <input
+                type="button"
+                value="Start"
+                className="start"
+                onClick={() => this.start()}
+              />
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

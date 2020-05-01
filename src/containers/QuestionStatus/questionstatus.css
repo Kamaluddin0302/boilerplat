@@ -1,0 +1,75 @@
+.mainQues {
+  background-color: white;
+  width: 90%;
+}
+.div2ndQues {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.qumain {
+  border: 1px solid rgb(179, 179, 179);
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+.status {
+  font-weight: bold;
+  font-size: 27px;
+}
+.tr1 {
+  border-bottom: 1px solid rgb(199, 198, 198);
+  padding: 200px;
+}
+
+.th1 {
+  color: rgb(129, 129, 241);
+  width: 60%;
+  font-size: 12px;
+  font-weight: bold;
+}
+.th2 {
+  width: 20%;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.th3 {
+  width: 20%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.answer {
+  color: rgb(129, 129, 241);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.parcentage {
+  text-align: center;
+}
+.respoce {
+  color: rgb(129, 129, 241);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+.totalparcentage {
+  text-align: center;
+  font-weight: 500;
+}
+.totalrespoce {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media only screen and (max-width: 629px) {
+  .mainQues {
+    background-color: white;
+    width: 100%;
+  }
+  .div2ndQues {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}
